@@ -5,14 +5,26 @@ body{
     align-items: center;
 }
 .add-grocery{
-    background-color: rgb(23, 82, 209);
+    background-color: rgb(53, 98, 196);
     color: rgb(200, 189, 189);
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     border: 2px solid black;
     width: 900px;
     margin-top: 50px;
     text-align: center;
+}
+.add-notification-success{
+    color: rgb(19, 211, 19);
+    border: 2px solid rgb(19, 211, 19);
+    padding: 5px 0;
+    border-radius: 5px;
+}
+.add-notification-error{
+    color: red;
+    border: 2px solid red;
+    padding: 5px 0;
+    border-radius: 5px;
 }
 h1{
     margin-top: 10px;
@@ -29,19 +41,20 @@ input[type='text']{
 }
 input[type='text']:focus{
     outline: 0;
+    box-sizing: border-box;
 }
 input[type='submit'], button{
     font-size: 22px;
     background-color: transparent;
     width: 90%;
     border-radius: 8px;
-    margin-top: 30px;
 }
 input[type='submit']{
     color: rgb(200, 189, 189);
     border: 3px solid rgb(200, 189, 189);
     cursor: pointer;
     transition-duration: .5s;
+    margin-top: 30px;
 }
 input[type='submit']:hover{
     color: black;
@@ -49,7 +62,7 @@ input[type='submit']:hover{
 }
 .grocery-items{
     background-color: rgb(132, 185, 206);
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     border: 2px solid black;
     width: 900px;
@@ -59,8 +72,28 @@ input[type='submit']:hover{
 .grocery-items h1{
     color:rgba(41, 77, 154, 0.782);
 }
+#adding-data p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 0;
+}
+#adding-data p:hover{
+    background-color: gray;
+}
+#adding-data p span:last-child{
+    color: red;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+#adding-data p span:last-child:hover{
+    transform: scale(1.5);
+}
 button{
-    border: 3px solid rgb(23, 82, 209);
+    border: 3px solid rgb(53, 98, 196);
     cursor: pointer;
     transition-duration: .5s;
+    margin-top: 20px;
 }
