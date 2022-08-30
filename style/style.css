@@ -5,7 +5,7 @@ body{
     align-items: center;
 }
 .add-grocery{
-    background-color: rgb(53, 98, 196);
+    background-color: rgba(80, 126, 225, 0.794);
     color: rgb(200, 189, 189);
     padding: 40px;
     border-radius: 10px;
@@ -15,14 +15,14 @@ body{
     text-align: center;
 }
 .add-notification-success{
-    color: rgb(19, 211, 19);
-    border: 2px solid rgb(19, 211, 19);
+    color: rgb(35, 192, 35);
+    border: 2px solid rgb(26, 189, 26);
     padding: 5px 0;
     border-radius: 5px;
 }
 .add-notification-error{
-    color: red;
-    border: 2px solid red;
+    color: rgba(245, 84, 84, 0.821);
+    border: 2px solid rgba(245, 84, 84, 0.821);
     padding: 5px 0;
     border-radius: 5px;
 }
@@ -69,6 +69,9 @@ input[type='submit']:hover{
     margin-top: 30px;
     text-align: center;
 }
+#items-notification{
+    text-transform: capitalize;
+}
 .grocery-items h1{
     color:rgba(41, 77, 154, 0.782);
 }
@@ -83,8 +86,11 @@ input[type='submit']:hover{
 #adding-data p:hover{
     background-color: gray;
 }
+#adding-data p span:first-child{
+    text-transform: capitalize
+}
 #adding-data p span:last-child{
-    color: red;
+    color: rgba(245, 84, 84, 0.821);
     cursor: pointer;
     transition-duration: .2s;
 }
@@ -92,7 +98,7 @@ input[type='submit']:hover{
     transform: scale(1.5);
 }
 button{
-    border: 3px solid rgb(53, 98, 196);
+    border: 3px solid rgba(80, 126, 225, 0.794);
     cursor: pointer;
     transition-duration: .5s;
     margin-top: 20px;

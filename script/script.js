@@ -44,7 +44,7 @@ function clearAllFn(){
         setTimeout(() => {
             itemsNotification.innerText = ''
             itemsNotification.classList.remove('add-notification-error')
-        }, 2000)
+        }, 4000)
     }else{
         itemsNotification.innerText = 'All Items Deleted'
         itemsNotification.classList.add('add-notification-error')
@@ -53,6 +53,24 @@ function clearAllFn(){
         setTimeout(() => {
             itemsNotification.innerText = ''
             itemsNotification.classList.remove('add-notification-error')
-        }, 2000)
+        }, 4000)
     }
 }
+
+const deleteEachItem = (e) => {
+    if(e.target.innerText === 'X'){
+        const target = e.target.parentNode
+        addingData.removeChild(target)
+        const name = target.children[0].innerText
+
+        itemsNotification.innerText = name + ' Removed From The List'
+        itemsNotification.classList.add('add-notification-success')
+        
+        setTimeout(() => {
+            itemsNotification.innerText = ''
+            itemsNotification.classList.remove('add-notification-success')
+        }, 4000)
+    }
+}
+
+addingData.addEventListener('click', deleteEachItem)
