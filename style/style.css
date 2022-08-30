@@ -1,0 +1,12 @@
+body{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-grocery{
+    background-color: rgb(23, 82, 209);
+}
+.grocery-items{
+    background-color: rgb(132, 185, 206);
+}
