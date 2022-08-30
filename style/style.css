@@ -5,12 +5,12 @@ body{
     align-items: center;
 }
 .add-grocery{
+    width: 900px;
     background-color: rgba(80, 126, 225, 0.794);
     color: rgb(200, 189, 189);
     padding: 40px;
     border-radius: 10px;
     border: 2px solid black;
-    width: 900px;
     margin-top: 50px;
     text-align: center;
 }
@@ -102,4 +102,31 @@ button{
     cursor: pointer;
     transition-duration: .5s;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px){
+    .add-grocery{
+        width: 700px;
+    }
+    .grocery-items{
+        width: 700px;
+    }
+}
+@media screen and (max-width: 950px){
+    .add-grocery{
+        width: 80%;
+    }
+    .grocery-items{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px){
+    .add-grocery{
+        width: 70%;
+        padding: 20px;
+    }
+    .grocery-items{
+        width: 70%;
+        padding: 20px;
+    }
 }
