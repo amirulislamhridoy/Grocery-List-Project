@@ -3,8 +3,8 @@ const input = document.getElementsByTagName('input')[0]
 const addNotification = document.getElementById('add-notification')
 const itemsNotification = document.getElementById('items-notification')
 const addingData = document.getElementById('adding-data')
+const btn = document.getElementById('btn')
 
-let addGroceryNotification = '';
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     if(!input.value){
@@ -26,6 +26,7 @@ form.addEventListener('submit', (e) => {
         <span>X</span>
         `
         addingData.appendChild(p)
+        input.value = ''
 
         setTimeout(() => {
             addNotification.innerText = ''
@@ -33,3 +34,25 @@ form.addEventListener('submit', (e) => {
         }, 2000)
     }
 })
+
+btn.addEventListener('click', clearAllFn)
+
+function clearAllFn(){
+    if(addingData.childNodes.length <= 1){
+        itemsNotification.innerText = 'No More Items To Delete';
+        itemsNotification.classList.add('add-notification-error')
+        setTimeout(() => {
+            itemsNotification.innerText = ''
+            itemsNotification.classList.remove('add-notification-error')
+        }, 2000)
+    }else{
+        itemsNotification.innerText = 'All Items Deleted'
+        itemsNotification.classList.add('add-notification-error')
+        addingData.innerHTML = ''
+        
+        setTimeout(() => {
+            itemsNotification.innerText = ''
+            itemsNotification.classList.remove('add-notification-error')
+        }, 2000)
+    }
+}
